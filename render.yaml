@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bai-twilio-whatsapp-mcp
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_WHATSAPP_FROM
+        sync: false
+      - key: PUBLIC_BASE_URL
+        sync: false
